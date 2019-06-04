@@ -1,0 +1,42 @@
+
+// Viewport variables
+$container-max-height: 98vh;
+$container-max-width: 94vw;
+$container-border-color: rgba(166, 176, 185, 0.486);
+$container-min-height: 300px;
+
+// Display variables
+$display-min-height: ($container-min-height * 30) / 100;
+$display-height: 30vh;
+$display-min-width: 92vw;
+$display-last-answer-min-height: 30%;
+$display-operation-min-height: 70%;
+
+// Keyboard variables
+$keyboard-min-height: ($container-min-height * 70) / 100;
+$keyboard-height: 60vh;
+$keyboard-a-width: 100%;
+$keyboard-b-width: 100%;
+$keyboard-cell-operator-background: #dfe1e5;
+$keyboard-cell-operand-background: #f1f3f4;
+
+// Resposive variables
+
+// most of smartphones (potrait)
+$xs-min-width: 320px;
+$xs-max-width: 480px;
+
+// Low resolution tablets and mobiles (landescape)
+$sm-min-width: 481px;
+$sm-max-width: 767px;
+
+// Tablets, ipads
+$md-min-width: 768px;
+$md-max-width: 1024px;
+
+// Laptops, Desktops
+$lg-min-width: 1025px;
+$lg-max-width: 1280px;
+
+// Desktops
+$xl-min-width: 1281px;

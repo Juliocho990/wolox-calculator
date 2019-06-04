@@ -1,0 +1,19 @@
+<div class="display-container">
+  <div class="last-answer">
+    <div class="logbook">
+      <div class="logbook-button" (click)="onLogBookButton($event)">
+        <svg width="26" height="26">
+          <line x1="13" y1="13" x2="13" y2="7" stroke-width="3"></line>
+          <line x1="13" y1="13" x2="19" y2="13" stroke-width="3"></line>
+          <circle cx="13" cy="13" r="10" stroke-width="3" fill="none" />
+          <circle cx="13" cy="13" r="1" stroke-width="3" fill="none" />
+        </svg>
+      </div>
+    </div>
+    <span class="last-answer-value" [innerHTML]="resultView ? resultView: 0">
+    </span>
+  </div>
+  <div tabindex="1" class="operation">
+    <span class="operation-value" [innerHTML]="operationView"></span>
+  </div>
+</div>

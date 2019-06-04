@@ -1,0 +1,17 @@
+@import '../../../sass/variables';
+
+.calculator-container {
+  min-height: $container-min-height;
+  max-height: 100vh;
+  max-width: $container-max-width;
+}
+
+.display {
+  box-sizing: border-box;
+  min-height: $display-min-height;
+}
+
+.keyboard {
+  box-sizing: border-box;
+  min-height: $keyboard-min-height;
+}

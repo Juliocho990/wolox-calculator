@@ -1,0 +1,20 @@
+<div class="log-book-container">
+  <div class="back-button" (click)="onButtonBack()">
+    <svg width="26px" height="26px">
+      <polyline fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+        points="13.0,5.0 3.0,13.0 23.0,13.0" />
+      <polyline fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+        points="13.0,21.0 3.0,13.0" />
+    </svg>
+  </div>
+  <div *ngFor="let itemLogBookData of currentLogBookData">
+    <div class="operation-container">
+      <div class="operation" [innerHTML]="itemLogBookData.operationView">
+      </div>
+    </div>
+    <div class="result-container">
+      <div class="result" [innerHTML]="itemLogBookData.result">
+      </div>
+    </div>
+  </div>
+</div>

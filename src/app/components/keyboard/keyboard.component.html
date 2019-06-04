@@ -1,0 +1,50 @@
+<div class="keyboard-container">
+  <div class="keyboard-b">
+    <table class="table-b">
+      <tbody>
+        <tr *ngFor="let rowKeryboardButtonsB of keyboardButtonsB">
+          <td *ngFor="let keyboardButtonB of rowKeryboardButtonsB">
+
+            <div #degOperator *ngIf="keyboardButtonB.key === 'Deg'" [ngClass]="{'cell-operator': true}">
+              <div class="cell-value" (click)="onKeyPressed(keyboardButtonB)">
+                <span [innerHTML]="keyboardButtonB.keyView ? keyboardButtonB.keyView : keyboardButtonB.key">
+                </span>
+              </div>
+            </div>
+            <div #radOperator *ngIf="keyboardButtonB.key === 'Rad'" [ngClass]="{'cell-operator': true}">
+              <div class="cell-value" (click)="onKeyPressed(keyboardButtonB)">
+                <span [innerHTML]="keyboardButtonB.keyView ? keyboardButtonB.keyView : keyboardButtonB.key">
+                </span>
+              </div>
+            </div>
+            <div *ngIf="keyboardButtonB.key !== 'Rad' && keyboardButtonB.key !== 'Deg'"
+              [ngClass]="{'cell-operator': keyboardButtonB.isOperator, 'cell-operand': !keyboardButtonB.isOperator}">
+              <div class="cell-value" (click)="onKeyPressed(keyboardButtonB)">
+                <span [innerHTML]="keyboardButtonB.keyView ? keyboardButtonB.keyView : keyboardButtonB.key">
+                </span>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="keyboard-a">
+    <table class="table-a">
+      <tbody>
+        <tr *ngFor="let rowKeryboardButtonsA of keyboardButtonsA">
+          <td *ngFor="let keyboardButtonA of rowKeryboardButtonsA">
+            <div [attr.equal-operator]="keyboardButtonA.key==='=' ? '': null"
+              [ngClass]="{'cell-operator': keyboardButtonA.isOperator, 'cell-operand': !keyboardButtonA.isOperator}"
+              tabindex="2">
+              <div class="cell-value" (click)="onKeyPressed(keyboardButtonA)">
+                <span [innerHTML]="keyboardButtonA.keyView ? keyboardButtonA.keyView : keyboardButtonA.key">
+                </span>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

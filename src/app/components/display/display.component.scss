@@ -1,0 +1,102 @@
+@import '../../../sass/variables';
+
+.display-container {
+  box-sizing: border-box;
+  min-height: $display-min-height;
+  min-width: $display-min-width;
+  height: $display-height;
+  margin: 4px;
+  border: 1px solid $container-border-color;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.operation:hover {
+  box-shadow: 0 0 5px 2px rgba(77, 144, 254, 0.6);
+}
+
+.last-answer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: $display-min-width;
+  min-height: $display-last-answer-min-height;
+  height: $display-last-answer-min-height;
+  background: keyboard-cell-operand-background;
+
+  .last-answer-value {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 30px;
+    line-height: 30px;
+    padding: 4px;
+    overflow-y: auto;
+    height: 100%;
+    width: 85%;
+    color: gray;
+  }
+
+  .logbook {
+    display: flex;
+    flex-direction: row;
+    width: 15%;
+    height: 100%;
+  }
+
+  .logbook-button {
+    position: relative;
+    top: 4px;
+    left: 4px;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 26px;
+    background-color: $keyboard-cell-operator-background;
+    border-radius: 8px;
+    cursor: pointer;
+    svg {
+      line,
+      circle {
+        stroke: rgb(102, 99, 99);
+      }
+    }
+  }
+  .logbook-button:active {
+    box-shadow: 0 0 5px 2px rgba(77, 144, 254, 0.6);
+    svg {
+      line,
+      circle {
+        stroke: #4d90fe;
+      }
+    }
+  }
+}
+
+.operation {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: $display-min-width;
+  max-width: 100%;
+  min-height: $display-operation-min-height;
+  height: $display-operation-min-height;
+  background: keyboard-cell-operand-background;
+  border-top: 1px solid $container-border-color;
+  .operation-value {
+    box-sizing: border-box;
+    font-size: 30px;
+    line-height: 30px;
+    padding: 4px;
+    overflow-y: auto;
+    height: 100%;
+  }
+}
